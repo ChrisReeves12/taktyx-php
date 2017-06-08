@@ -1,0 +1,8 @@
+/**
+ * HomePageSearchActions
+ *
+ * @author Christopher Lee Reeves <ChrisReeves12@yahoo.com>
+ **/
+
+import Dispatcher from 'frontend/Dispatcher';
+import ActionTypes from 'frontend/ActionTypes';

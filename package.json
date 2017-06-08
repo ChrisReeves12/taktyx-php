@@ -1,0 +1,43 @@
+{
+  "name": "taktyx",
+  "version": "1.0.0",
+  "description": "Web and mobile application built to serve customers with the businesses they need.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "gulp css:frontend && webpack --config frontend.webpack.js",
+    "watch-frontend-sass": "gulp css:frontend:watch",
+    "watch-frontend-js": "webpack --config frontend.webpack.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ChrisReeves12@bitbucket.org/ChrisReeves12/taktyx.git"
+  },
+  "author": "Taktyx",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ChrisReeves12/taktyx#readme",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "flux": "^3.1.2",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.1",
+    "numeral": "^2.0.4",
+    "randomstring": "^1.1.5",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-image-lightbox": "^3.4.1",
+    "webpack": "^1.13.3"
+  }
+}

@@ -1,0 +1,31 @@
+/**
+ * {ClassName}
+ *
+ * @author Christopher Lee Reeves <ChrisReeves12@yahoo.com>
+ **/
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+export default class {ClassName} extends React.Component
+{
+    constructor()
+    {
+        super();
+    }
+
+    render()
+    {
+        return(<div>Render of {ClassName}...</div>);
+    }
+
+    static initialize()
+    {
+        let elements = document.getElementsByClassName('{ClassLocator}');
+        for(let x = 0; x < elements.length; x++)
+        {
+            let element = elements[x];
+            ReactDOM.render(<{ClassName}/>, element);
+        }
+    }
+}

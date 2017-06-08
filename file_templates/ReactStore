@@ -1,0 +1,28 @@
+/**
+ * {ClassName}
+ *
+ * @author Christopher Lee Reeves <ChrisReeves12@yahoo.com>
+ **/
+
+import { EventEmitter } from 'events';
+import Dispatcher from 'frontend/Dispatcher';
+import ActionTypes from 'frontend/ActionTypes';
+
+class {ClassName} extends EventEmitter
+{
+    constructor()
+    {
+        super();
+    }
+
+    // Handle incoming actions
+    handleActions(action)
+    {
+
+    }
+}
+
+const classInstance = new {ClassName}();
+Dispatcher.register(classInstance.handleActions.bind(classInstance));
+
+export default classInstance;

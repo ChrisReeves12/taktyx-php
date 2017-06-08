@@ -1,0 +1,15 @@
+/node_modules
+/public/hot
+/public/img
+/storage/logs
+/storage/framework
+/storage/app/public/img/uploads
+/storage/*.key
+/vendor
+/.vagrant
+Homestead.json
+Homestead.yaml
+.env
+.idea
+public/css
+public/js

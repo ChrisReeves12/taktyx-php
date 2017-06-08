@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600i,700,800');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.stop-scrolling
+{
+  height: 100%;
+  overflow: hidden;
+}
+
+body
+{
+  font-family: 'Muli', sans-serif;
+
+  .sticky-top
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-radius: 0 !important;
+    width: 100%;
+  }
+
+  div.online-status
+  {
+    border-right: 1px solid #bfbfbf;
+    width: 65px;
+    display: inline-block;
+    margin-left: 7px;
+
+    i.online-status-icon
+    {
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 10px;
+
+      &.online
+      {
+        background-color: #00d100;
+      }
+
+      &.offline
+      {
+        background-color: #bdc6cb;
+      }
+    }
+
+    div.status-text
+    {
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 12px;
+      margin-left: 1px;
+      font-weight: bold;
+      font-size: 11px;
+
+      &.online
+      {
+        color: #1ca51c;
+      }
+
+      &.offline
+      {
+        color: #bcbcbc;
+        font-weight: normal;
+      }
+    }
+  }
+
+  *:focus
+  {
+    outline-width: 0;
+  }
+
+  div.dark-screen
+  {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0.4;
+  }
+
+
+
+  a.front-logo
+  {
+    display: block;
+    max-width: 205px;
+    margin-bottom: 7px;
+
+    img
+    {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .hidden
+  {
+    display: none;
+  }
+
+  div.home-search-form
+  {
+    div.home-search-form-container
+    {
+      margin-bottom: 10px;
+
+      div.search-result-buttons
+      {
+        margin-top: 5px;
+
+        button.send-takt-button
+        {
+          background-color: #8caed3;
+          color: white;
+          border: 0;
+          padding: 3px 9px;
+          font-size: 12px;
+          border-radius: 6px;
+          margin-right: 5px;
+          cursor: pointer;
+
+          img
+          {
+            max-width: 14px;
+            margin-top: -2px;
+          }
+        }
+
+        button.select-all-button, button.unselect-all
+        {
+          margin-right: 5px;
+          border: 0;
+          background: #7bb799;
+          color: white;
+          padding: 3px 11px;
+          font-size: 12px;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+
+        button.unselect-all
+        {
+          background-color: #bfbfbf;
+          font-size: 12px;
+        }
+      }
+
+      div.search-form
+      {
+        background-color: #fff;
+
+        input
+        {
+          border: 1px solid #bfbfbf;
+          box-shadow: none;
+          border-right: 0;
+        }
+
+        button
+        {
+          margin: 0;
+          box-shadow: none;
+          border: 0;
+          color: #ffffff;
+          padding: 0 14px 0 14px;
+          background-color: #8caed3;
+          cursor: pointer;
+
+          &:hover
+          {
+            border: 0;
+            box-shadow: none;
+            border-left: solid 1px #ccc;
+          }
+        }
+      }
+
+      div.dropdown-search-results
+      {
+        border: 1px solid #bfbfbf;
+        border-top: none;
+
+        div.search-loader-container
+        {
+          padding: 20px;
+        }
+
+        div.dropdown-search-item
+        {
+          padding: 4px;
+          border-bottom: 1px solid #bfbfbf;
+          font-size: 12px;
+
+          &:last-of-type
+          {
+            border-bottom: none;
+          }
+
+          a
+          {
+            color: black;
+
+            div.search-item-photo
+            {
+              display: inline-block;
+              width: 32px;
+              height: 32px;
+              vertical-align: top;
+              margin-right: 5px;
+
+              img
+              {
+                max-width: 100%;
+                max-height: 100%;
+              }
+            }
+
+            div.search-item-info
+            {
+              display: inline-block;
+              vertical-align: top;
+
+              div.search-item-info-title
+              {
+                font-weight: bold;
+              }
+
+              div.search_item-info-desc
+              {
+                font-size: 12px;
+                color: #3c3c3c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.search-form-options-section
+  {
+    h4
+    {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+
+    p
+    {
+      margin: 0;
+    }
+
+    position: relative;
+
+    div.minimize-button
+    {
+      position: absolute;
+      top: -6px;
+      right: 0;
+      color: #8caed3;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+
+    div.options-section
+    {
+      div.option
+      {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        vertical-align: top;
+
+        div.option-radio
+        {
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 5px;
+          margin-top: -1px;
+
+          img
+          {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  div.home-search-results-container
+  {
+    div.loader-container
+    {
+      width: 150px;
+      height: 150px;
+      margin: 40px auto 0;
+      opacity: 0.4;
+
+      img
+      {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      text-align: center;
+    }
+
+    div.home-search-result
+    {
+      border: 1px solid #bfbfbf;
+      padding: 5px 5px 7px 5px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      position: relative;
+
+      div.checkbox-container
+      {
+        max-width: 25px;
+        max-height: 25px;
+        cursor: pointer;
+        position: absolute;
+        top: 6px;
+        right: 7px;
+        img
+        {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      p.info-desc
+      {
+        margin-bottom: 5px;
+      }
+
+      div.img-container
+      {
+        vertical-align: top;
+        display: inline-block;
+        max-width: 50px;
+        max-height: 50px;
+        margin-right: 5px;
+        border: 1px solid #656565;
+
+        img
+        {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      div.info-section
+      {
+        vertical-align: top;
+        display: inline-block;
+        font-size: 12px;
+        max-width: 80%;
+
+        .home-search-result-address-bar
+        {
+          font-size: 10px;
+          margin-bottom: 6px;
+          font-weight: bold;
+        }
+
+        .title
+        {
+          font-weight: bold;
+          display: block;
+          font-size: 13px;
+          margin-bottom: 0;
+
+          a
+          {
+            color: #909090;
+          }
+        }
+
+        div.home-search-result-status-bar
+        {
+          margin-bottom: 4px;
+
+          div.distance
+          {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 7px;
+            font-size: 10px;
+            font-weight: initial;
+            color: #a0a0a0;
+          }
+        }
+      }
+
+      div.message-bar
+      {
+        .message-button
+        {
+          border: 0;
+          border-radius: 3px;
+          color: white;
+          background-color: #8caed3;
+          padding: 4px;
+          font-size: 11px;
+          cursor: pointer;
+
+          img
+          {
+            max-width: 13px;
+            margin-top: -2px;
+          }
+        }
+      }
+    }
+  }
+
+  div.send-takt-popup
+  {
+    div.send-takt-popup-container
+    {
+      position: fixed;
+      top: 70px;
+      left: 25%;
+      z-index: 100;
+      width: 50%;
+      min-height: 270px;
+      background-color: white;
+      border-radius: 4px;
+      padding: 0 10px 10px 10px;
+      box-shadow: 1px 3px 5px rgba(0,0,0,0.4);
+
+      .row
+      {
+        margin: 0;
+      }
+
+      div.button-bar
+      {
+        .send-takt-button
+        {
+          background: #8caed3;
+          color: white;
+          border: 0;
+          border-radius: 3px;
+          font-size: 14px;
+          cursor: pointer;
+          padding: 4px 10px;
+
+          img
+          {
+            max-width: 20px;
+            margin-right: 2px;
+          }
+        }
+      }
+
+      div.recipients
+      {
+        padding-left: 0;
+        max-height: 300px;
+        overflow: scroll;
+
+        div.recipient
+        {
+          margin-left: 0;
+          margin-bottom: 4px;
+          padding-bottom: 4px;
+
+          a
+          {
+            img
+            {
+              max-width: 32px;
+              max-height: 32px;
+              display: inline-block;
+              margin-right: 4px;
+              vertical-align: top;
+            }
+
+            .name-section
+            {
+              vertical-align: top;
+              display: inline-block;
+
+              h5
+              {
+                font-size: 13px;
+                font-weight: bold;
+                margin: 0 0 -5px;
+                color: #6a6a6a;
+              }
+            }
+
+            div.online-status
+            {
+              border-right: 0;
+              margin-left: 0;
+
+              div.status-text
+              {
+                margin-left: 5px;
+              }
+            }
+          }
+
+          &:last-of-type
+          {
+            border-bottom: 0;
+          }
+        }
+      }
+
+      h2
+      {
+        font-size: 18px;
+        color: #8399b1;
+        font-weight: 100;
+        padding-top: 25px;
+      }
+
+      a.close-button
+      {
+        color: #cccccc;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 28px;
+      }
+
+      .input-area
+      {
+        border: 1px solid #bfbfbf;
+        width: 100%;
+        height: 150px;
+        padding: 8px;
+        font-size: 13px;
+        color: #777777;
+        overflow: scroll;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  div.mobile-search-options
+  {
+    border: 1px solid #bfbfbf;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  @import "top_navigation";
+}

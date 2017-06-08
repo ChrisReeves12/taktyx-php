@@ -1,0 +1,16 @@
+/**
+ * {ClassName}
+ *
+ * @author Christopher Lee Reeves <ChrisReeves12@yahoo.com>
+ **/
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+export default class {ClassName} extends React.Component
+{
+    render()
+    {
+        return(<div>Render of {ClassName}...</div>);
+    }
+}
